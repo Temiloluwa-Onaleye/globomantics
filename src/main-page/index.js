@@ -1,7 +1,12 @@
+import Header from "./header";
 import "./main-page.css";
 
 function App() {
-  return <div>Temiloluwa</div>;
+  return (
+    <div className="container">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
