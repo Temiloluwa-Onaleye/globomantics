@@ -1,10 +1,18 @@
-import React from "react";
+import { useHistory } from "react-router-dom";
 
 const HouseFilter = ({ allHouses }) => {
+  const history = useHistory();
+
   const countries = allHouses
-    ? Array.from(new setImmediate(allHouses.map((h) => h.country)))
+    ? Array.from(new Set(allHouses.map((h) => h.country)))
     : [];
   countries.unshift(null);
+
+  const onSearchChange = (e) => {
+    const country = e.target.value;
+    history.push(`/searchresults/${country}`);
+  };
+
   return (
     <div className="row mt-3">
       <div className="offset-md-2 col-md-4">
