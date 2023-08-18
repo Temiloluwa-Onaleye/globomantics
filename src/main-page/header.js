@@ -1,4 +1,3 @@
-import { Component } from "react";
 import logo from "./GloboLogo.png";
 
 const Header = ({ subtitle }) => (
